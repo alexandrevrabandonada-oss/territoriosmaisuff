@@ -1,6 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { whatsappGroupUrl } from "./share-content";
+import { ShareTools } from "./share-tools";
 
 type FrontKey = "saude" | "monitoramento" | "circular" | "memoria";
 
@@ -103,8 +105,6 @@ const budget = [
   ["Cultura e comunicação", 14, "acervo, memória, materiais públicos e incidência"],
   ["Infraestrutura digital", 12, "plataforma, hospedagem, segurança e continuidade"]
 ];
-
-const whatsappGroupUrl = "https://chat.whatsapp.com/GJkNgMJ0NlBJapHpFK77Pk?mode=gi_t";
 
 function FlowLines() {
   return (
@@ -234,6 +234,8 @@ export default function Home() {
           Participar do grupo no WhatsApp
         </a>
       </section>
+
+      <ShareTools />
 
       <section className="intro section" id="programa">
         <SectionHeader
