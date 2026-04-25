@@ -104,6 +104,8 @@ const budget = [
   ["Infraestrutura digital", 12, "plataforma, hospedagem, segurança e continuidade"]
 ];
 
+const whatsappGroupUrl = "https://chat.whatsapp.com/GJkNgMJ0NlBJapHpFK77Pk?mode=gi_t";
+
 function FlowLines() {
   return (
     <svg className="flow-lines" viewBox="0 0 1200 420" aria-hidden="true">
@@ -158,43 +160,79 @@ export default function Home() {
             <small>Médio Paraíba</small>
           </a>
           <nav aria-label="Seções principais">
+            <a href="#votacao">Votação</a>
             <a href="#frentes">Frentes</a>
             <a href="#governanca">Governança</a>
-            <a href="#cronograma">24 meses</a>
           </nav>
-          <a className="nav-cta" href="#cta">Apresentar proposta</a>
+          <a className="nav-cta" href={whatsappGroupUrl} target="_blank" rel="noreferrer">
+            Entrar no grupo
+          </a>
         </header>
 
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow">Programa público de conhecimento territorial</p>
+            <p className="eyebrow">Emenda participativa de R$ 1 milhão</p>
             <h1>
               UFF + Território
               <span>Observatório Popular do Médio Paraíba</span>
             </h1>
             <p className="hero-lead">
-              Conhecimento enraizado no território. Ambiente, dados, cultura e ação popular reunidos para
-              transformar escuta, evidência e mobilização em legado público.
+              Este é o projeto que vamos apresentar na votação pública da emenda participativa. No dia
+              <strong> 28 de abril de 2026, às 18h, na Praça Brasil</strong>, o projeto mais votado recebe
+              R$ 1 milhão para sair do papel.
             </p>
             <div className="hero-actions">
-              <a href="#frentes">Conhecer as frentes</a>
-              <a href="#governanca">Ver arranjo institucional</a>
+              <a href={whatsappGroupUrl} target="_blank" rel="noreferrer">Entrar no grupo de mobilização</a>
+              <a href="#votacao">Como votar no dia 28</a>
             </div>
           </div>
 
           <aside className="hero-panel" aria-label="Mensagem central do programa">
             <div className="stamp">Ambiente + Dados + Cultura + Ação Popular</div>
-            <div className="map-card">
+            <div className="map-card vote-card">
               <div className="map-rings" />
-              <h2>Volta Redonda e Médio Paraíba como território estratégico</h2>
+              <p className="vote-date">28 abr. 2026 · 18h</p>
+              <h2>Praça Brasil, Volta Redonda</h2>
               <p>
-                Onde desenvolvimento industrial, desigualdade ambiental, memória operária, universidade pública
-                e organização popular se encontram.
+                Qualquer pessoa pode votar presencialmente. Glauber Braga escolherá a proposta vencedora
+                conforme a votação popular do dia.
               </p>
             </div>
           </aside>
         </div>
         <Hillscape />
+      </section>
+
+      <section className="vote-callout section" id="votacao">
+        <div className="vote-callout-copy">
+          <span>Votação aberta</span>
+          <h2>Dia 28, a proposta precisa virar presença.</h2>
+          <p>
+            A emenda participativa será decidida por voto popular presencial. Vamos apresentar o UFF + Território
+            como projeto para receber R$ 1 milhão e iniciar o Observatório Popular do Médio Paraíba.
+          </p>
+        </div>
+        <div className="vote-steps" aria-label="Informações da votação">
+          <article>
+            <strong>Quando</strong>
+            <p>28 de abril de 2026, às 18h.</p>
+          </article>
+          <article>
+            <strong>Onde</strong>
+            <p>Praça Brasil, Volta Redonda.</p>
+          </article>
+          <article>
+            <strong>Quem vota</strong>
+            <p>Qualquer pessoa presente pode votar.</p>
+          </article>
+          <article>
+            <strong>Como ajudar</strong>
+            <p>Entre no grupo, convide mais gente e ajude a organizar a presença no dia.</p>
+          </article>
+        </div>
+        <a className="share-whatsapp" href={whatsappGroupUrl} target="_blank" rel="noreferrer">
+          Participar do grupo no WhatsApp
+        </a>
       </section>
 
       <section className="intro section" id="programa">
@@ -412,15 +450,16 @@ export default function Home() {
       <section className="final-cta section" id="cta">
         <FlowLines />
         <div>
-          <p className="eyebrow">Conhecer, compartilhar, apoiar</p>
-          <h2>Uma proposta para fazer o território aparecer com ciência, memória e voz pública.</h2>
+          <p className="eyebrow">Votar, compartilhar, mobilizar</p>
+          <h2>Para ganhar a emenda, o território precisa ocupar a Praça Brasil.</h2>
           <p>
-            O Observatório Popular do Médio Paraíba é uma ponte entre universidade e vida concreta. Ele organiza
-            informação, fortalece gente, testa soluções e devolve ao público aquilo que o território ajuda a produzir.
+            No dia 28 de abril de 2026, às 18h, qualquer pessoa pode votar. Compartilhe a proposta,
+            entre no grupo de mobilização e ajude o Observatório Popular do Médio Paraíba a disputar
+            R$ 1 milhão para ambiente, dados, cultura e ação popular.
           </p>
           <div className="hero-actions">
+            <a href={whatsappGroupUrl} target="_blank" rel="noreferrer">Entrar no grupo</a>
             <a href="#programa">Rever a proposta</a>
-            <a href="#orcamento">Ver prioridades</a>
           </div>
         </div>
       </section>
